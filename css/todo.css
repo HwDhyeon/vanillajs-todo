@@ -1,0 +1,43 @@
+.todo-input {
+  border: 0;
+  min-height: 50px;
+  line-height: 50px;
+  width: 100%;
+  vertical-align: middle;
+  border-bottom: 1px solid #030303;
+}
+
+.todo-input::placeholder {
+  text-align: center;
+  font-size: 34px;
+}
+
+.todo-input:focus {
+  outline: none;
+  text-align: center;
+  font-size: 32px;
+}
+
+.todo-input:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+.todo-input::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: hotpink;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.todo-input:hover::after .todo-input:focus::after {
+  transform: scale(1);
+}

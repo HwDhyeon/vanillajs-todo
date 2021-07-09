@@ -1,0 +1,22 @@
+.user {
+  cursor: pointer;
+  text-align: right;
+  min-width: 40px;
+  font-size: 18px;
+}
+
+.user-input {
+  background-color: white;
+  border: 0;
+  color: #030303;
+  height: 30px;
+}
+
+.user-input:focus {
+  outline: none;
+}
+
+.user-input::placeholder {
+  color: #030303;
+  font-size: 18px;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "vanillajs-todo",
+  "version": "1.0.0",
+  "description": "Todo List with vanillaJS",
+  "homepage": "https://HwDhyeon.github.io/vanillajs-todo/",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HwDhyeon",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

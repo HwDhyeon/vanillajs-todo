@@ -1,0 +1,2 @@
+const OPEN_WEATHER_API_KEY = 'cd4d167eb3c576a0bd3a83500221ae34';
+const KAKAO_API_KEY = 'KakaoAK d8cffed078858cb642b05d7d8cc14f21';

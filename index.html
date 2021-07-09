@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/user.css" />
+    <link rel="stylesheet" href="./css/clock.css" />
+    <link rel="stylesheet" href="./css/todo.css" />
+    <title>My Todo Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="nav-item">
+            <div class="logo no-select">My Todo Player</div>
+          </div>
+          <div class="nav-item">
+            <form class="user-form">
+              <input
+                class="user-input"
+                type="text"
+                placeholder="Enter new name"
+              />
+            </form>
+            <div class="user"></div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-box">
+        <div class="title">Todo List</div>
+        <form class="todo-form">
+          <input class="todo-input" type="text" placeholder="What to do?">
+        </form>
+      </div>
+    </div>
+    <div class="clock">
+      <div class="date">2021Y 07M 09D</div>
+      <div class="time">14 : 26 : 30</div>
+    </div>
+    <script src="./src/config.js"></script>
+    <script src="./src/index.js"></script>
+    <script src="./src/clock.js"></script>
+    <script src="./src/location.js"></script>
+    <script src="./src/user.js"></script>
+    <script src="./src/todo.js"></script>
+  </body>
+</html>
