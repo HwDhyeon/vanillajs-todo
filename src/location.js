@@ -1,9 +1,11 @@
+const weatherInfo = document.querySelector(".weather");
+
 const saveCoords = (coordsObject) => {
-  localStorage.setItem('coords', JSON.stringify(coordsObject));
+  localStorage.setItem("coords", JSON.stringify(coordsObject));
 };
 
 const readCoords = () => {
-  return JSON.parse(localStorage.getItem('coords'));
+  return JSON.parse(localStorage.getItem("coords"));
 };
 
 const handleGeoSuccess = async (position) => {
@@ -17,7 +19,7 @@ const handleGeoSuccess = async (position) => {
       headers: {
         Authorization: KAKAO_API_KEY,
       },
-    },
+    }
   );
 
   const data = await response.json();
@@ -40,7 +42,7 @@ const handleGeoError = () => {
 const askForCoords = async () => {
   await navigator.geolocation.getCurrentPosition(
     handleGeoSuccess,
-    handleGeoError,
+    handleGeoError
   );
 };
 
@@ -58,7 +60,7 @@ const getWeather = async (coords) => {
     coords = readCoords();
   }
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${OPEN_WEATHER_API_KEY}`,
+    `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${OPEN_WEATHER_API_KEY}`
   );
 
   const data = await response.json();
@@ -72,6 +74,7 @@ const getWeather = async (coords) => {
 const initLocation = async () => {
   const coords = await getCoords();
   const weather = await getWeather(coords);
+  weatherInfo.innerText = `${coords.address}\n${weather.temp}℃\n${weather.weather}`;
 };
 
 initLocation();

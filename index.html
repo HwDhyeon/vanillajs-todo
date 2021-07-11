@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/loading.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/user.css" />
     <link rel="stylesheet" href="./css/clock.css" />
     <link rel="stylesheet" href="./css/todo.css" />
-    <title>My Todo Player</title>
+    <link rel="stylesheet" href="./css/weather.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>My Todo Explorer</title>
   </head>
   <body>
+    <div class="bg"></div>
+    <div class="loading">
+      <div class="container">
+        <div>Please wait a loading...</div>
+      </div>
+    </div>
     <div class="container">
       <nav class="navbar">
         <div class="navbar-container">
           <div class="nav-item">
-            <div class="logo no-select">My Todo Player</div>
+            <div class="logo no-select">My Todo Explorer</div>
           </div>
           <div class="nav-item">
             <form class="user-form">
@@ -30,16 +39,18 @@
         </div>
       </nav>
       <div class="container-box">
-        <div class="title">Todo List</div>
+        <div class="title">What are you going to do today?</div  iv>
         <form class="todo-form">
           <input class="todo-input" type="text" placeholder="What to do?">
         </form>
+        <div class="todolist"></div>
       </div>
     </div>
-    <div class="clock">
-      <div class="date">2021Y 07M 09D</div>
-      <div class="time">14 : 26 : 30</div>
+    <div class="clock no-select">
+      <div class="date"></div>
+      <div class="time"></div>
     </div>
+    <div class="weather"></div>
     <script src="./src/config.js"></script>
     <script src="./src/index.js"></script>
     <script src="./src/clock.js"></script>

@@ -1,42 +1,41 @@
-const userText = document.querySelector('.user');
-const userForm = document.querySelector('.user-form');
-const userInput = userForm.querySelector('.user-input');
+const userText = document.querySelector(".user");
+const userForm = document.querySelector(".user-form");
+const userInput = userForm.querySelector(".user-input");
 
 const saveUsername = (username) => {
-  localStorage.setItem('username', username);
+  localStorage.setItem("username", username);
 };
 
 const readUsername = () => {
-  return localStorage.getItem('username');
+  return localStorage.getItem("username");
 };
 
 const setUsername = (username) => {
-  userForm.classList.add('hide');
-  userText.classList.remove('hide');
-  userText.innerText = username;
+  userForm.classList.add("hide");
+  userText.classList.remove("hide");
+  userText.innerText = `Hi, ${username}`;
 };
 
 const handleUserFormSubmit = (event) => {
-  console.log('Hello');
   event.preventDefault();
 
   const username = userInput.value;
   if (username) {
-    userInput.value = '';
+    userInput.value = "";
     saveUsername(username);
     setUsername(username);
   }
 };
 
 const handleUserTextClick = () => {
-  userForm.classList.remove('hide');
-  userText.classList.add('hide');
+  userForm.classList.remove("hide");
+  userText.classList.add("hide");
   userInput.focus();
-  saveUsername('');
+  saveUsername("");
 };
 
-userForm.addEventListener('submit', handleUserFormSubmit);
-userText.addEventListener('click', handleUserTextClick);
+userForm.addEventListener("submit", handleUserFormSubmit);
+userText.addEventListener("click", handleUserTextClick);
 
 (() => {
   const username = readUsername();

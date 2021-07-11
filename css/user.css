@@ -6,7 +6,7 @@
 }
 
 .user-input {
-  background-color: white;
+  background: none;
   border: 0;
   color: #030303;
   height: 30px;
@@ -14,9 +14,12 @@
 
 .user-input:focus {
   outline: none;
+  font-size: 18px;
+  text-align: right;
 }
 
 .user-input::placeholder {
   color: #030303;
   font-size: 18px;
+  text-align: right;
 }

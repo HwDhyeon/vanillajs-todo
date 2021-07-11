@@ -1,43 +1,64 @@
 .todo-input {
   border: 0;
-  min-height: 50px;
-  line-height: 50px;
+  height: 50px;
+  font-size: 34px;
+  line-height: 34px;
   width: 100%;
   vertical-align: middle;
-  border-bottom: 1px solid #030303;
+  border-bottom: 1px solid gray;
+  background: none;
+  margin-top: 30px;
 }
 
 .todo-input::placeholder {
   text-align: center;
-  font-size: 34px;
+  color: gray;
 }
 
 .todo-input:focus {
   outline: none;
   text-align: center;
-  font-size: 32px;
+  border-bottom: linear-gradient(to right, #7BC6CC, #BE93C5);
 }
 
-.todo-input:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
+.todolist {
+  height: 800px;
+  overflow: auto;
 }
 
-.todo-input::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.todo {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.todo > span {
+  width: 90%;
+}
+
+.todo > .flex-row {
+  width: 10%;
+}
+
+.todo > span {
+  font-size: 30px;
+  text-align: left;
+}
+
+.todo form {
   width: 100%;
-  height: 0.1em;
-  background-color: hotpink;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-  opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
 }
 
-.todo-input:hover::after .todo-input:focus::after {
-  transform: scale(1);
+.todo form > input {
+  font-size: 30px;
+  line-height: 30px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: none;
+}
+
+.todo form > input:focus {
+  outline: none;
 }
